@@ -8,7 +8,7 @@ engine:                      # Engine settings.
   protocol: "uci"            # "uci" or "xboard"
   ponder: true               # Think on opponent's time.
   polyglot:
-    enabled: true            # Activate polyglot book.
+    enabled: false            # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
         - engines/books/Goi5.1.bin
@@ -46,7 +46,7 @@ engine:                      # Engine settings.
       min_depth: 20
       min_knodes: 0
     online_egtb:
-      enabled: true
+      enabled: false
       min_time: 20
       max_pieces: 7
       source: "lichess"      # One of "lichess", "chessdb".
@@ -128,7 +128,7 @@ greeting:
 # pgn_directory: "game_records" # A directory where PGN-format records of the bot's games are kept
 
 matchmaking:
-  allow_matchmaking: true    # Set it to 'true' to challenge other bots.
+  allow_matchmaking: 'true'    # Set it to 'true' to challenge other bots.
   challenge_variant: "random" # If set to 'random', the bot will choose one variant from the variants enabled in 'challenge.variants'.
   challenge_timeout: 30       # Create a challenge after being idle for 'challenge_timeout' minutes.
   challenge_initial_time: 60  # Initial time in seconds of the challenge.
