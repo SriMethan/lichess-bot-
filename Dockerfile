@@ -8,11 +8,11 @@ COPY . .
 RUN apt update > aptud.log && apt install -y wget python3 python3-pip p7zip-full > apti.log
 RUN python3 -m pip install --no-cache-dir -r requirements.txt > pip.log
 
-RUN wget --no-check-certificate -nv "https://gitlab.com/OIVAS7572/Cerebellum3Merge.bin" -O Cerebellum3Merge.bin.7z \
-&& 7z e Cerebellum3Merge.bin.7z && rm Cerebellum3Merge.bin.7z && mv Cerebellum3Merge.bin engines/books/Cerebellum3Merge.bin
+RUN wget --no-check-certificate "https://gitlab.com/OIVAS7572/Cerebellum3merge.bin/-/raw/master/Cerebellum3Merge.bin.7z" -O Cerebellum3Merge.bin.7z
+Run 7z e Cerebellum3Merge.bin.7z && rm Cerebellum3Merge.bin.7z
 
-RUN wget --no-check-certificate -nv "https://gitlab.com/OIVAS7572/3-4-5piecesSyzygy.7z" -O 3-4-5piecesSyzygy.7z \
-&& 7z e 3-4-5piecesSyzygy.7z && rm 3-4-5piecesSyzygy.7z
+RUN wget --no-check-certificate "https://gitlab.com/OIVAS7572/Syzygy/-/raw/master/3-4-5piecesSyzygy.7z" -O 3-4-5piecesSyzygy.7z
+Run 7z e 3-4-5piecesSyzygy.7z && rm 3-4-5piecesSyzygy.7z
 
 RUN chmod +x engines/stockfish15
 #Engine name ^^^^^^^^^^^^^^^^^^^
