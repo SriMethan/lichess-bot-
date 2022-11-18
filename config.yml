@@ -58,6 +58,7 @@ engine:                      # Engine settings.
     Move Overhead: 1000      # Increase if your bot flags games too often.
     Threads: 4               # Max CPU threads the engine can use.
     Hash: 256                # Max memory (in megabytes) the engine can allocate.
+    SyzygyPath: "3-4-5piecesSyzygy"
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
 #     depth: 5               # Search depth ply only.
@@ -65,15 +66,15 @@ engine:                      # Engine settings.
 # xboard_options:            # Arbitrary XBoard options passed to the engine.
 #   cores: "4"
 #   memory: "4096"
-    egtpath:                 # Directory containing egtb (endgame tablabases), relative to this project. For 'xboard' engines.
+#  egtpath:                 # Directory containing egtb (endgame tablabases), relative to this project. For 'xboard' engines.
 #     gaviota: "Gaviota path"
 #     nalimov: "Nalimov Path"
 #     scorpio: "Scorpio Path"
-      syzygy: "3-4-5piecesSyzygy"
+#     syzygy: "3-4-5piecesSyzygy"
 #   go_commands:             # Additional options to pass to the XBoard go command.
 #     depth: 5               # Search depth ply only.
 #     Do note that the go commands 'movetime' and 'nodes' are invalid and may cause bad time management for XBoard engines.
-  silence_stderr: false      # Some engines (yes you, Leela) are very noisy.
+# silence_stderr: false      # Some engines (yes you, Leela) are very noisy.
 
 abort_time: 20               # Time to abort a game in seconds when there is no activity.
 fake_think_time: false       # Artificially slow down the bot to pretend like it's thinking.
